@@ -7,8 +7,8 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f0f0f0;
-    color: #333;
+    background-color: #121212; /* Cor de fundo escura */
+    color: #e0e0e0; /* Cor do texto clara */
     line-height: 1.6;
     padding: 0;
     margin: 0;
@@ -17,7 +17,7 @@ body {
 
 /* Estilos para o Header */
 header {
-    background: linear-gradient(135deg, #00796b, #4caf50);
+    background: linear-gradient(135deg, #1a73e8, #2196f3); /* Gradiente com tons de azul */
     color: white;
     text-align: center;
     padding: 50px 0;
@@ -62,7 +62,7 @@ header {
 }
 
 .navbar .nav-links a:hover {
-    color: #ffeb3b;
+    color: #ffeb3b; /* Amarelo para destaque */
     transform: scale(1.1);
 }
 
@@ -77,8 +77,8 @@ header {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    border: 5px solid white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 5px solid #1a73e8; /* Cor do border combinando com o header */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Sombra mais suave */
     animation: rotate 5s linear infinite;
 }
 
@@ -90,7 +90,7 @@ h1 {
 
 h2 {
     font-size: 2.5rem;
-    color: #00796b;
+    color: #1a73e8; /* Cor de texto em azul */
     margin-bottom: 20px;
     animation: fadeInUp 1.8s ease-out;
 }
@@ -115,17 +115,17 @@ p {
 
 .buttons .btn:hover {
     background-color: white;
-    color: #00796b;
+    color: #1a73e8;
     transform: scale(1.1);
 }
 
 /* Main Section */
 main {
     padding: 40px 20px;
-    background-color: #ffffff;
+    background-color: #1f1f1f; /* Cor de fundo mais escura para o conteúdo principal */
     margin-top: 40px;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Sombra mais forte para contraste */
     animation: fadeInUp 2s ease-out;
 }
 
@@ -145,7 +145,7 @@ ul li {
 
 /* Footer */
 footer {
-    background-color: #00796b;
+    background-color: #1a73e8; /* Cor de fundo azul para o rodapé */
     color: white;
     text-align: center;
     padding: 20px;
@@ -202,7 +202,9 @@ footer {
         padding: 30px 10px;
     }
 }
-
+@media(max-width:677px){
+    .nav-links{display: none !important;}
+}
 @media (max-width: 480px) {
     .hero {
         margin-top: 60px;
@@ -280,8 +282,6 @@ footer {
     }
 }
 
-
-
 @keyframes slideIn {
     0% {
         opacity: 0;
@@ -292,3 +292,5 @@ footer {
         transform: translateX(0);
     }
 }
+
+
