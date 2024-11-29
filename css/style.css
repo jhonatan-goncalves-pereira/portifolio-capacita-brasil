@@ -1,103 +1,294 @@
- /* Reset básico */
- * {
+/* Reset de estilos */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background: #f4f4f4;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
     color: #333;
+    line-height: 1.6;
+    padding: 0;
+    margin: 0;
+    transition: all 0.3s ease;
 }
 
+/* Estilos para o Header */
 header {
-    background: linear-gradient(45deg, #1f4037, #99f2c8);
+    background: linear-gradient(135deg, #00796b, #4caf50);
     color: white;
-    padding: 20px 10px;
     text-align: center;
+    padding: 50px 0;
+    position: relative;
+    animation: fadeIn 2s ease-out;
 }
 
-header h1 {
-    margin-bottom: 10px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    transition: all 0.3s ease;
 }
 
-header p {
-    margin-bottom: 15px;
-}
-
-header a {
-    display: inline-block;
-    margin: 5px 10px;
-    padding: 10px 15px;
-    background: white;
-    color: #1f4037;
-    border: 1px solid #1f4037;
-    border-radius: 5px;
+.navbar .logo a {
+    color: white;
+    font-size: 2rem;
     text-decoration: none;
     font-weight: bold;
-    transition: 0.3s;
+    transition: all 0.3s ease;
 }
 
-header a:hover {
-    background: #1f4037;
+.navbar .nav-links {
+    list-style-type: none;
+    display: flex;
+}
+
+.navbar .nav-links li {
+    margin-left: 20px;
+}
+
+.navbar .nav-links a {
     color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
 }
 
-main {
-    max-width: 1100px;
-    margin: 20px auto;
-    padding: 20px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.navbar .nav-links a:hover {
+    color: #ffeb3b;
+    transform: scale(1.1);
+}
+
+/* Estilo da Hero Section */
+.hero {
+    margin-top: 60px;
+    text-align: center;
+    animation: slideUp 1.5s ease-out;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: rotate 5s linear infinite;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-top: 20px;
+    animation: fadeInUp 1.5s ease-out;
 }
 
 h2 {
-    color: #1f4037;
-    margin-bottom: 15px;
+    font-size: 2.5rem;
+    color: #00796b;
+    margin-bottom: 20px;
+    animation: fadeInUp 1.8s ease-out;
 }
 
-p, ul {
-    margin-bottom: 20px;
+p {
+    font-size: 1.2rem;
+    animation: fadeInUp 2s ease-out;
+}
+
+.buttons .btn {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 10px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    transform: scale(1);
+}
+
+.buttons .btn:hover {
+    background-color: white;
+    color: #00796b;
+    transform: scale(1.1);
+}
+
+/* Main Section */
+main {
+    padding: 40px 20px;
+    background-color: #ffffff;
+    margin-top: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 2s ease-out;
+}
+
+.section {
+    margin-bottom: 40px;
 }
 
 ul {
-    list-style: disc inside;
+    list-style-type: none;
+    margin-top: 10px;
 }
 
-.card {
-    margin-bottom: 20px;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background: #f9f9f9;
+ul li {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
 }
 
+/* Footer */
 footer {
-    background: #1f4037;
+    background-color: #00796b;
     color: white;
     text-align: center;
-    padding: 10px 0;
-    margin-top: 20px;
+    padding: 20px;
+    margin-top: 40px;
+    animation: fadeInUp 2s ease-out;
 }
 
-footer p {
-    margin: 0;
-}
-
+/* Responsividade */
 @media (max-width: 768px) {
-    header h1 {
-        font-size: 1.8rem;
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    .navbar .nav-links {
+        flex-direction: column;
+        margin-top: 20px;
+        transition: all 0.5s ease-in;
+    }
+
+    .navbar .nav-links li {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .hero {
+        margin-top: 80px;
+    }
+
+    .profile-pic {
+        width: 120px;
+        height: 120px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1.1rem;
+    }
+
+    .buttons .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
     }
 
     main {
-        padding: 10px;
+        padding: 30px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        margin-top: 60px;
     }
 
-    header a {
-        padding: 8px 12px;
+    .profile-pic {
+        width: 100px;
+        height: 100px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .buttons .btn {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+
+    .navbar .nav-links {
+        display: none;
+    }
+
+    .navbar.active .nav-links {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        animation: slideIn 0.5s ease-out;
+    }
+
+    .navbar .nav-links li {
+        margin-top: 10px;
+    }
+}
+
+/* Animações */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
     }
 }
